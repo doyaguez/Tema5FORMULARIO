@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PUFOSA</title>
+</head>
+<body>
+
+	<label id="emailLabel">Introduce el correo electronico (Obligatorio)<input type="email" id="email" name="email" placeholder="ejemplo@pufosa.es" pattern="[_a-z0-9-]+(\.[_a-z0-9-]+)*@pufosa*(\.[a-z]{2,3})$" required></label><br>
+	<label id="userLabel">Introduce la contrase&ntildea (Obligatorio)<input id="pass" type="password" name="password"  required></label><br>
+	<button id="botonLogin" type="submit" onclick="comprobarCookie()" name="enviar">ENVIAR</button>
+	
+	<div id="mensaje"></div>
+	<input id="eliminar" style="display: none;" type="submit" value="LogOut" onsubmit="logOut(email.value)" onclick=location.href='index.html'>
+
+</body>
+<script src="js/login.js"></script>
+</html>

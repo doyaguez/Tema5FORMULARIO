@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PUFOSA</title>
+	<link rel="stylesheet" type="text/css" href="css/registro.css">
+</head>
+<body>
+	<fieldset id="registro">
+			<legend>Formulario Registro</legend>
+				<form  method="post" name="form_reg" onsubmit="setCookie(email.value,password.value);" accept-charset="utf-8">
+				<label>Introduce tu nombre(Obligatorio)<input id="nombreA" type="text" name="nombreA" required></label><br>
+				<label>Introduce tu apellido(Obligatorio)<input id="apellidoA" type="text" name="apellidoA" required></label><br>
+				<label>Introduce el correo electronico (Obligatorio)<input id="emailA" type="email" name="email" placeholder="ejemplo@pufosa.es" pattern="[_a-z0-9-]+(\.[_a-z0-9-]+)*@pufosa*(\.[a-z]{2,3})$" required></label><br>
+				<label>Introduce tu puesto (Opcional)
+					<select class='puesto' name="puesto" >
+						<option value="SECRETARIO">SECRETARIO</option>
+						 <option value="STAFF">STAFF</option>
+						 <option value="ANALYST">ANALYST</option>
+						 <option value="VENDEDOR">VENDEDOR</option>
+						 <option value="PRESIDENT">PRESIDENT</option>
+					</select>
+				</label><br>
+				<label>Introduce tu jefe (Opcional)
+					<select class='jefe' name="jefe" >
+						<option value="AMES MURRAY">AMES MURRAY</option>
+						 <option value="ALICE JENSEN">ALICE JENSEN</option>
+						 <option value="BARBARA MILLER">BARBARA MILLER</option>
+						 <option value="FRANCIS KING">FRANCIS KING</option>
+						 <option value="JENNIFER FORD"></option>
+					</select>
+				</label><br>
+				<label>Introduce fecha contrato (Obligatorio)<input id="contrato" type="date" name="contrato" min="2000-01-01" max="2019-12-31" required></label><br>
+				<label>Telefono(Opcional)<input class="telf" type="number" name="telf"></label><br>
+				<label>Salario(Obligatorio)<input class="salario" type="number" name="salario" required></label><br>
+				<label>Introduce la contrase&ntildea (Obligatorio)<input id="pass" type="password" name="password"  required></label><br>
+				<label>Confirma la contrase&ntildea (Obligatorio)<input id="rePass" type="password" name="rePassword"  required></label><br>
+				
+				<input type="submit" id="botReg" value="Enviar">
+				</form>
+				<input type="submit" id="atras" value="volver" onclick=location.href='login.html'>
+	</fieldset>
+	<h1 id="mensaje"></h1>
+<script src="js/registro.js"></script>
+</body>
+</html>
